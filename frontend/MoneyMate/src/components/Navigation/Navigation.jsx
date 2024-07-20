@@ -39,11 +39,11 @@ function Navigation({active, setActive}) {
 
 const NavStyled = styled.nav`
     padding: 2rem 1.5rem;
-    width:374px;
+    width: 374px;
     height: 100%;
     background: rgba(252, 246, 249, 0.78);
     border: 3px solid #FFFFFF;
-    border-filter: blur(4.5px);
+    backdrop-filter: blur(4.5px);
     border-radius: 32px;
     display: flex;
     flex-direction: column;
@@ -60,21 +60,20 @@ const NavStyled = styled.nav`
             border-radius: 50%;
             object-fit: cover;
             background: #fcf6f9;
-            border: 1px solid #FFFFFF;
+            border: 2px solid #FFFFFF;
             padding: .2rem;
             box-shadow: 0px 1px 17px rgba(0, 0, 0, 0.06);
         }
-            h2{
-                color: rgba(34, 34, 96, 1);
-            }
-            p{
-                color: rgba(34, 34, 96, .6);
-            }
-        
+        h2{
+            color: rgba(34, 34, 96, 1);
+        }
+        p{
+            color: rgba(34, 34, 96, .6);
+        }
     }
-    
+
     .menu-items{
-        flex:1;
+        flex: 1;
         display: flex;
         flex-direction: column;
         li{
@@ -111,7 +110,6 @@ const NavStyled = styled.nav`
             background: #222260;
             border-radius: 0 10px 10px 0;
         }
-
     }
 `;
 export default Navigation;
