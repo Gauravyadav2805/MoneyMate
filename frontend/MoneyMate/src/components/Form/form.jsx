@@ -65,13 +65,13 @@ function Form() {
       <div className="selects input-control">
         <select required value={category} name="category" id="category" onChange={handleInput('category')}>
             <option value="" disabled >Select Option</option>
-            <option value="salary">Salary</option>
+            <option value="salary">internship</option>
             <option value="freelancing">freelancing</option>
             <option value="investments">investments</option>
             <option value="stocks">stocks</option>
             <option value="bitcoin">bitcoins</option>
             <option value="bank">bank transfer</option>
-            <option value="youtube">youtube</option>
+            {/* <option value="youtube">youtube</option> */}
             <option value="other">other</option>
         </select>
       </div>
