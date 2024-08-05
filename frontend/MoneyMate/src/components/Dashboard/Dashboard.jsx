@@ -35,9 +35,14 @@ function Dashboard() {
                 </div>
                 <div className="balance">
                 <h3>Total Balance</h3>
+                <BalanceAmount  isNegative={totalBalance()<0}>
                   <p>
                     {dollar}{totalBalance()}
                   </p>
+                </BalanceAmount>
+                  {/* <p className={totalBalance()<0 ? 'negative':'positive'}>
+                    {dollar}{totalBalance()}
+                  </p> */}
                 </div>
               </div>
             </div>
@@ -114,12 +119,12 @@ const DashboardStyled = styled.div`\
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    p{
-                        color: var(--color-green);
-                        opacity: 0.6;
-                        font-size: 2.5rem;
-                    }
                 }
+                p{
+                    opacity: 0.9;
+                    font-size: 2.5rem;
+                }
+
             }
         }
 
@@ -154,5 +159,7 @@ const DashboardStyled = styled.div`\
         }
     }
 `;
-
+const BalanceAmount = styled.p`
+  color: ${props => props.isNegative ? 'red' : 'var(--color-green)'};
+`;
 export default Dashboard

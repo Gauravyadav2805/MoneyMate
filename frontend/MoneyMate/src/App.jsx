@@ -8,6 +8,7 @@ import React, { useMemo, useState } from 'react'
 import Dashboard from './components/Dashboard/Dashboard'
 import Income from './components/Income/Income'
 import Expenses from './components/Expenses/Expenses'
+import Analysis from './components/Analysis/Analysis'
 import { useGlobalContext } from './context/globalContext'
 import Transactions from './components/Transactions/Transactions'
 
@@ -16,7 +17,7 @@ function App() {
   const[active, setActive] = React.useState(1)
 
   const global = useGlobalContext()
-  console.log(global);
+  // console.log(global);
 
   const displayData = () => {
     switch(active){
@@ -28,17 +29,19 @@ function App() {
         return <Income/>
       case 4:
         return  <Expenses />
+      case 5:
+        return <Analysis/>
       default:
         return <Dashboard/>
     }
   };
 
-   const orbMemo = useMemo( () =>{
-    return <Orb />
-   }, [])
+  //  const orbMemo = useMemo( () =>{
+  //   return <Orb />
+  //  }, [])
   return (
     <AppStyled bg = { bg } >
-      {orbMemo}
+      {/* {orbMemo} */}
       <MainLayout>
         <Navigation active={active} setActive={setActive} />
           <main>

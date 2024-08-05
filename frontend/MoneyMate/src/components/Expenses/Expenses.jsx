@@ -35,7 +35,7 @@ function Expenses() {
                   date={date}
                   type={type}
                   category={category}
-                  indicatorColor="var(--color-red)"
+                  indicatorColor="red"
                   deleteItem={deleteExpense}
                 />
               );
@@ -65,7 +65,7 @@ const ExpenseStyled = styled.div`
     span{
       font-size: 2.5rem;
       font-weight: 800;
-      color: var(--color-green);
+      color: red;
     }
   }
   .income-content{
